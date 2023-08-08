@@ -94,7 +94,8 @@ DATABASES = {
     # }
     'default': dj_database_url.config(
         # Feel free to alter this value to suit your needs.
-        default='postgresql://aromrkrc:v2i5NXw80QdwpLfV5Ff9rGEAOmLWVUzw@silly.db.elephantsql.com/aromrkrc',
+        # default='postgresql://aromrkrc:v2i5NXw80QdwpLfV5Ff9rGEAOmLWVUzw@silly.db.elephantsql.com/aromrkrc',
+        default=os.environ.get('DATABASE_URL'),
         conn_max_age=600
     )
 }
